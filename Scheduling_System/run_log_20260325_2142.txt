@@ -1,0 +1,4 @@
+=== Starting Appointment System Checks ===
+Warning: Database not found. It will be created on first run.
+Launching application...
+Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
