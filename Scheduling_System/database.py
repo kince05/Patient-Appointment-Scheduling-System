@@ -167,6 +167,12 @@ class DatabaseManager:
             self.conn.execute("""
             UPDATE appointments SET status='cancelled' WHERE id=?
             """, (appointment_id,))
+            
+    def get_all_doctors(self):
+        cur = self.conn.execute("SELECT name FROM doctors ORDER BY name")
+        return [row["name"] for row in cur.fetchall()]
+
+
 
     def close(self):
         self.conn.close()
