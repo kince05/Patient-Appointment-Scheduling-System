@@ -122,9 +122,9 @@ class AppointmentGUI:
         except Exception as e:
             self.root.after(0, lambda err=e: messagebox.showerror("Error", str(err)))
 
-    # ----------------------------
+    
     # VIEW TABLE
-    # ----------------------------
+    
     def view(self):
         for row in self.tree.get_children():
             self.tree.delete(row)
@@ -141,9 +141,9 @@ class AppointmentGUI:
                 appt.status
             ))
 
-    # ----------------------------
-    # RIGHT CLICK MENU
-    # ----------------------------
+  
+    # RIGHT CLICK
+  
     def _on_right_click(self, event):
         item = self.tree.identify_row(event.y)
         if not item:
