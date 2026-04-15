@@ -1,7 +1,3 @@
-# models.py
-# Simple data models used by the scheduler and database layers.
-# Using dataclasses for concise, self-documenting data containers.
-
 from dataclasses import dataclass
 from datetime import datetime
 
@@ -26,10 +22,9 @@ class Doctor(Person):
 
 @dataclass
 class Appointment:
-    """
-    Appointment value object.
-    Stores patient name, doctor name and the appointment datetime as a datetime object.
-    Use this class to pass appointment info between layers.
-    """
+    id: int
     patient_name: str
     doctor_name: str
+    appointment_datetime: datetime
+    status: str
+    created_at: datetime
